@@ -48,4 +48,45 @@ usersController.create = function respond(req, res, next){
     return next();
 };
 
+usersController.login = function respond(req, res, next){
+    
+    //oauth2 https://github.com/domenic/restify-oauth2/blob/master/examples/cc/server.js
+    req.username = req.params.email;
+    req.password = req.params.password;
+    
+    var query = User.findOne({ email : req.params.username });
+
+    query.select('password');
+    
+    query.exec(function (err, user) {
+        if (err) return next(err);
+        //aqui el login
+        if (user.password !== req.authorization.basic.password)
+            return next(new restify.NotAuthorizedError());
+        
+        res.send({
+            result: 'true'
+            , auth : req.authorization 
+        });
+    })
+    
+
+    return next();
+};
+
+
+usersController.logout = function respond(req, res, next){
+    
+};
+
+
+usersController.home = function respond(req, res, next){
+    res.send({
+        result: 'true'
+        , auth : req.authorization 
+    });
+    return next();
+};
+
+
 module.exports = usersController;

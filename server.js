@@ -33,3 +33,15 @@ var router = require('./router')(server);
 server.listen(config.port, function() {
   console.log('Server listening: %s', server.url);
 });
+
+/*
+// usuario de mongodb
+{ user: "app",
+  pwd: "123",
+  roles: [
+    { role: "readWrite", db: "db-couple-life" }
+  ]
+}
+
+
+*/

@@ -5,7 +5,7 @@
         "host": "localhost",
         "port": "27017",
         "user": "app",
-        "password": "1234",
+        "password": "123",
         "dbname": "db-couple-life"
     }
 }
