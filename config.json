@@ -1,0 +1,11 @@
+{
+    "host":"localhost",
+    "port":8080,
+    "database": {
+        "host": "localhost",
+        "port": "27017",
+        "user": "app",
+        "password": "1234",
+        "dbname": "db-couple-life"
+    }
+}
