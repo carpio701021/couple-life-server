@@ -1,5 +1,5 @@
-# couple-life-server
-App to manage couple relationships in all aspects
+# InLove Server
+App to manage love relationships in all aspects
 
 
 # About project
