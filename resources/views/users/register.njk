@@ -1,0 +1,28 @@
+{% extends 'master' %}
+
+{% block content %}
+    {{ form.open({action: 'UserController.doRegister'}) }}
+    
+      {{ csrfField }}
+    
+      <div class="field">
+        {{ form.label('username', 'Choose a username') }}
+        {{ form.text('username') }}
+      </div>
+    
+      <div class="field">
+        {{ form.label('email', 'Enter email address') }}
+        {{ form.text('email') }}
+      </div>
+    
+      <div class="field">
+        {{ form.label('password', 'Choose a strong password') }}
+        {{ form.password('password') }}
+      </div>
+    
+      <div class="button">
+        {{ form.submit('Register') }}
+      </div>
+    
+    {{ form.close() }}
+{% endblock %}
