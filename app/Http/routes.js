@@ -20,8 +20,8 @@ const Route = use('Route')
 Route.on('/').render('welcome')
 
 Route.get('profile', 'UsersController.profile')
-//Route.post('login', 'UsersController.login')
-Route.get('/login', 'UsersController.login')
+Route.on('/login').render('users.login')
+Route.post('login', 'UsersController.login')
 Route.on('/register').render('users.register')
 //Route.get('signin', 'UsersController.signin')
 

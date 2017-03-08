@@ -1,22 +1,17 @@
 {% extends 'master' %}
 
 {% block content %}
-    {{ form.open({action: 'UsersController.doRegister'}) }}
+    {{ form.open({action: 'UsersController.login'}) }}
     
       {{ csrfField }}
-    
-      <div class="field">
-        {{ form.label('username', 'Choose a username') }}
-        {{ form.text('username') }}
-      </div>
-    
+      
       <div class="field">
         {{ form.label('email', 'Enter email address') }}
         {{ form.text('email') }}
       </div>
     
       <div class="field">
-        {{ form.label('password', 'Choose a strong password') }}
+        {{ form.label('password', 'Enter your password') }}
         {{ form.password('password') }}
       </div>
     
