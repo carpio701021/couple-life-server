@@ -9,7 +9,7 @@
     "serve": "node server.js",
     "lint": "standard"
   },
-  "author": "",
+  "author": "Javier Carpio",
   "license": "MIT",
   "description": "",
   "private": true,
